@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import StarRating from './StarRating';
+import TicketCounter from './TicketCounter';
 
-function AttractionCard({ name, category, description, rating }) {
+function AttractionCard({ name, category, description, rating, price }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   function handleToggleFavorite() {
     setIsFavorite((prev) => !prev);
   }
+
+  const ticketPrice = price || (name === 'Đại Nội Huế' ? 150000 : null);
 
   return (
     <div className="attraction-card">
@@ -18,7 +22,14 @@ function AttractionCard({ name, category, description, rating }) {
       <div className="attraction-card__badge">{category}</div>
       <h3>{name}</h3>
       <p>{description}</p>
-      <span className="attraction-card__rating">⭐ {rating}</span>
+      
+      <StarRating />
+
+      {ticketPrice && <TicketCounter price={ticketPrice} />}
+
+      <div className="attraction-card__footer">
+        <span className="attraction-card__rating">⭐ {rating}</span>
+      </div>
     </div>
   );
 }

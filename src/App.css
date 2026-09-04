@@ -157,11 +157,131 @@
   color: #94a3b8;
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
+  margin-bottom: 0.75rem;
 }
 
-/* Rating */
+/* LAB 4: Star Rating Component */
+.star-rating {
+  margin: 0.75rem 0 1rem 0;
+  padding: 0.6rem 0.85rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.star-rating__stars {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.star {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #475569;
+  user-select: none;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.star:hover {
+  transform: scale(1.25);
+}
+
+.star.is-filled {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}
+
+.star-rating__text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 0 !important;
+}
+
+/* LAB 5: Ticket Counter Component */
+.ticket-counter {
+  margin: 0.75rem 0 1rem 0;
+  padding: 0.85rem 1rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 12px;
+}
+
+.ticket-counter__header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 0.6rem;
+}
+
+.ticket-counter__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ticket-counter__controls {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.9);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.ticket-counter__controls button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-counter__controls button:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+}
+
+.ticket-counter__controls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.ticket-counter__quantity {
+  width: 32px;
+  text-align: center;
+  font-weight: 700;
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.ticket-counter__total {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0 !important;
+}
+
+.ticket-counter__total strong {
+  color: #34d399;
+}
+
+/* Card Footer */
+.attraction-card__footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Rating Badge */
 .attraction-card__rating {
   align-self: flex-start;
   display: inline-flex;

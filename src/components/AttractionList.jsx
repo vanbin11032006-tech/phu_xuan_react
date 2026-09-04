@@ -10,6 +10,7 @@ function AttractionList({ attractions }) {
           category={item.category}
           description={item.description}
           rating={item.rating}
+          price={item.price}
         />
       ))}
     </div>

@@ -5,6 +5,7 @@ export const attractions = [
     category: 'Di tích',
     description: 'Quần thể di tích cung đình triều Nguyễn, di sản văn hoá thế giới UNESCO.',
     rating: 4.7,
+    price: 150000,
   },
   {
     id: 2,
