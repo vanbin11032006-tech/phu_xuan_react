@@ -1,31 +1,33 @@
 import { useState } from 'react';
-import AttractionList from './components/AttractionList';
-import CategoryTabs from './components/CategoryTabs';
-import { attractions } from './data/attractions';
+import MenuList from './components/MenuList';
+import { menuItems } from './data/menu';
 import './App.css';
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState('Tất cả');
+  const [favoriteIds, setFavoriteIds] = useState([]);
 
-  const categories = [
-    'Tất cả',
-    ...new Set(attractions.map((item) => item.category)),
-  ];
+  function handleToggleFavorite(id, isFavorite) {
+    if (isFavorite) {
+      setFavoriteIds((prev) => [...prev, id]);
+    } else {
+      setFavoriteIds((prev) => prev.filter((item) => item !== id));
+    }
+  }
 
-  const filteredAttractions =
-    selectedCategory === 'Tất cả'
-      ? attractions
-      : attractions.filter((item) => item.category === selectedCategory);
+  const favoriteCount = favoriteIds.length;
 
   return (
     <div className="app">
-      <h1>Khám phá Huế</h1>
-      <CategoryTabs
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
-      />
-      <AttractionList attractions={filteredAttractions} />
+      <header className="app-header">
+        <h1>🍜 Thực đơn Ẩm thực Huế</h1>
+        <p className="favorite-counter">
+          Số món đã yêu thích: <strong>{favoriteCount}/{menuItems.length}</strong>
+        </p>
+      </header>
+
+      <main>
+        <MenuList items={menuItems} onToggleFavorite={handleToggleFavorite} />
+      </main>
     </div>
   );
 }
