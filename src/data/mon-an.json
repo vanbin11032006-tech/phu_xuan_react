@@ -1,0 +1,6 @@
+[
+  { "id": 1, "ten": "Bún bò Huế", "gia": 35000, "moTa": "Nước dùng cay nồng, sả và mắm ruốc." },
+  { "id": 2, "ten": "Cơm hến", "gia": 25000, "moTa": "Hến xào, rau sống, bánh tráng nướng giòn." },
+  { "id": 3, "ten": "Bánh bèo", "gia": 30000, "moTa": "Bánh bèo chén, tôm cháy, mỡ hành." },
+  { "id": 4, "ten": "Nem lụi", "gia": 40000, "moTa": "Nem nướng than, cuốn bánh tráng, nước lèo đậu phộng." }
+]

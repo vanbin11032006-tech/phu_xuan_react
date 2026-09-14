@@ -11,6 +11,7 @@ function MenuList({ items, onToggleFavorite }) {
           price={item.price}
           description={item.description}
           isSpicy={item.isSpicy}
+          image={item.image}
           onToggleFavorite={onToggleFavorite}
         />
       ))}

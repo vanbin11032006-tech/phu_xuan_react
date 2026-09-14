@@ -5,6 +5,7 @@ export const menuItems = [
     price: 45000,
     description: 'Món ăn đặc sản Huế với nước dùng đậm đà, giò heo, huyết và chả lá.',
     isSpicy: true,
+    image: '/images/bun_bo_hue.png',
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const menuItems = [
     price: 35000,
     description: 'Bánh chiên giòn rụm với nhân tôm, thịt, giá đỗ ăn kèm nước lèo đặc biệt.',
     isSpicy: false,
+    image: '/images/banh_khoai.png',
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const menuItems = [
     price: 30000,
     description: 'Cơm nguội trộn hến xào, mắm ruốc, tóp mỡ giòn và rau sống thơm ngon.',
     isSpicy: true,
+    image: '/images/com_hen.png',
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const menuItems = [
     price: 25000,
     description: 'Bánh gói lá dong mềm mượt với nhân tôm thịt băm nhỏ, vị thanh dịu.',
     isSpicy: false,
+    image: '/images/banh_nam.png',
   },
   {
     id: 5,
@@ -33,5 +37,6 @@ export const menuItems = [
     price: 20000,
     description: 'Món chè truyền thống Huế thơm ngon ngọt dịu với nhiều loại đậu và bột lọc.',
     isSpicy: false,
+    image: '/images/che_hem.png',
   },
 ];
