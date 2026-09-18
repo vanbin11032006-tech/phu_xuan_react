@@ -1,0 +1,37 @@
+.nut {
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.nut--chinh {
+  background-color: #0f6e6a;
+  color: #ffffff;
+}
+.nut--chinh:hover {
+  background-color: #0b5451;
+}
+.nut--phu {
+  background-color: #e4e7eb;
+  color: #1b2a4a;
+}
+.nut--phu:hover {
+  background-color: #cbd2d9;
+}
+.nut--nho {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+.nut--trung-binh {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.nut--lon {
+  padding: 12px 24px;
+  font-size: 16px;
+}

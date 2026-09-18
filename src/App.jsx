@@ -1,7 +1,8 @@
-import Bài7Page from './pages/Bài7Page';
+import TrangDanhMuc from "./pages/TrangDanhMuc";
+import "./App.css";
 
 function App() {
-  return <Bài7Page />;
+  return <TrangDanhMuc />;
 }
 
 export default App;

@@ -1,0 +1,14 @@
+.the {
+  border: 1px solid #cbd2d9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #ffffff;
+}
+.the__dau {
+  background: #0f6e6a;
+  color: #ffffff;
+  padding: 8px 14px;
+  font-weight: 700;
+}
+.the__than { padding: 12px 14px; }

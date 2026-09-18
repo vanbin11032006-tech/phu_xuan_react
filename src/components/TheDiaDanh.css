@@ -1,0 +1,27 @@
+.the-dia-danh {
+  border: 1px solid #cbd2d9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+.the-dia-danh__anh { width: 100%; height: 160px; object-fit: cover; }
+.the-dia-danh__than { padding: 12px 14px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.the-dia-danh__ten { margin: 0 0 6px; color: #1b2a4a; font-size: 18px; }
+.the-dia-danh__mo-ta { margin: 0 0 12px; color: #52606d; font-size: 14px; flex: 1; }
+.the-dia-danh__nut-hanh-dong {
+  align-self: flex-start;
+  padding: 6px 12px;
+  background-color: #0f6e6a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+.the-dia-danh__nut-hanh-dong:hover {
+  background-color: #0c5754;
+}
