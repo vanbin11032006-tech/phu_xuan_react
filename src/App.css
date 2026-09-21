@@ -11,3 +11,72 @@
 .danh-sach li {
   margin-bottom: 6px;
 }
+
+.tour-list-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.price-filter {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+
+.price-filter label {
+  display: grid;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.price-filter input {
+  width: 100%;
+}
+
+.filter-summary {
+  color: #475569;
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tour-card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 8%);
+}
+
+.tour-card__badge {
+  color: #b45309;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tour-card__category {
+  color: #0f766e;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.empty-state {
+  padding: 24px;
+  border: 1px dashed #94a3b8;
+  color: #475569;
+}
+
+@media (max-width: 640px) {
+  .price-filter {
+    grid-template-columns: 1fr;
+  }
+}
