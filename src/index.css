@@ -1,33 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #f8fafc;
-  --bg-card: rgba(255, 255, 255, 0.95);
-  --bg-card-hover: rgba(255, 255, 255, 1);
-  --border-color: rgba(15, 23, 42, 0.1);
-  --border-accent: rgba(2, 132, 199, 0.3);
-  
-  --primary: #0284c7;
-  --primary-glow: rgba(2, 132, 199, 0.15);
-  --accent: #d97706;
-  --success: #059669;
-  --success-bg: rgba(5, 150, 105, 0.1);
-  --warning: #d97706;
-  --warning-bg: rgba(217, 119, 6, 0.1);
-  --danger: #e11d48;
-  --danger-bg: rgba(225, 29, 72, 0.1);
-  
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-dim: #64748b;
-  
-  --font-sans: 'Manrope', system-ui, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-code: 'DM Mono', monospace;
-  --cream: #0f172a;
-  --gold: #d97706;
-  --gold-light: #b45309;
-  --coral: #e11d48;
+  font-family: 'DM Sans', sans-serif;
+  color: #f6f7fb;
+  background: #090b12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
 * {
@@ -37,38 +18,41 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: #f8fafc;
-  background-image: 
-    radial-gradient(circle at 10% 0%, rgba(2, 132, 199, 0.08), transparent 25rem), 
-    radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.06), transparent 25rem),
-    linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px), 
-    linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
-  background-size: auto, auto, 32px 32px, 32px 32px;
-  background-attachment: fixed;
-  color: var(--text-main);
+  min-width: 340px;
   min-height: 100vh;
+  background: #090b12;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
-code, pre {
-  font-family: var(--font-code);
+button {
+  font: inherit;
 }
 
-/* Scrollbar */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #d9f36a;
+  outline-offset: 3px;
+}
+
+::selection {
+  color: #090b12;
+  background: #d9f36a;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #11141c;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #353a47;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #515767;
+}

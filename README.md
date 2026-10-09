@@ -1,28 +1,37 @@
-# phu-xuan-react — Bài 9: Tái sử dụng thành phần trong React
+# Phú Xuân Cinema — Advanced Cinema Web App
+
+Giao diện ứng dụng đặt vé xem phim tương tác, xây dựng bằng React và Vite.
+
+## Tài liệu nộp bài
+
+1. [Tài liệu nghiệp vụ](./docs/BUSINESS_REQUIREMENTS.md)
+2. [Tài liệu giao diện AI thực thi](./docs/AI_UI_IMPLEMENTATION.md)
+3. [Tài liệu kỹ thuật AI Frontend](./docs/FRONTEND_TECHNICAL.md)
+4. [Tài liệu kỹ thuật AI Admin](./docs/ADMIN_TECHNICAL.md)
 
 ## Cài đặt & chạy
 ```bash
 npm install
 npm run dev
 ```
-Mở http://localhost:5173
+Mở http://localhost:5173 để khám phá ứng dụng.
 
-## Thành phần đã xây dựng
-- **TheDiaDanh** (`src/components/TheDiaDanh.jsx`): Thẻ địa danh tái sử dụng qua props, có destructuring, giá trị mặc định cho `moTa` ("Đang cập nhật mô tả..."), và callback prop-hàm `onHanhDong` cho phép tương tác.
-- **The** (`src/components/The.jsx`): Thành phần khung "vỏ hộp" sử dụng `children` bọc lấy nội dung bất kỳ, hỗ trợ thanh tiêu đề tùy chọn (`tieuDe`).
-- **BoCucTrang** (`src/components/BoCucTrang.jsx`): Bố cục trang chia nhỏ thành 3 khe JSX (`thanhDieuHuong`, `noiDungChinh`, `chanTrang`).
-- **DanhSach** (`src/components/DanhSach.jsx`): Áp dụng mẫu Render Props (`cacMuc`, `hienThiMuc`) để tách biệt hoàn toàn logic lặp/khung mảng khỏi cách hiển thị từng phần tử.
-- **HopThongBao** / **HopThongBaoThanhCong** (`src/components/HopThongBao.jsx`): Áp dụng mẫu kết hợp (Composition) và chuyên biệt hóa (Specialization) để tạo khung thông báo tổng quát và biến thể thành công.
-- **Nut** (`src/components/Nut.jsx`) & **HuyHieu** (`src/components/HuyHieu.jsx`): Thành phần tái sử dụng tự thiết kế cho Lab 5 Challenge, phối hợp cả props và children.
-- **TrangDanhMuc** (`src/pages/TrangDanhMuc.jsx`): Trang danh mục hoàn chỉnh cho đồ án nhóm, tổng hợp mọi thành phần đã xây dựng.
+## Tính năng
+- Trang thông tin Cinestar Huế với địa chỉ 25 Hai Bà Trưng, Phường Thuận Hoá, TP. Huế.
+- Thanh thông báo ứng dụng, điều hướng lịch chiếu/khuyến mãi/dịch vụ, chọn cụm rạp và nút đổi VN/ENG.
+- Tab phim đang chiếu, phim sắp chiếu và suất chiếu đặc biệt; bảng giá tham khảo theo đối tượng/ngày.
+- Khám phá phim nổi bật, chuyển phim, tìm kiếm và xem thông tin suất chiếu.
+- Chọn ngày, giờ chiếu và ghế trên sơ đồ SVG co giãn; hỗ trợ ghế thường, ghế VIP, keyboard navigation và trạng thái realtime mock.
+- Giữ ghế có đếm ngược 5 phút, giới hạn 8 ghế và cảnh báo khi lựa chọn tạo ghế đơn bị bỏ trống.
+- Chọn combo bắp nước, tính giá tức thời và hoàn tất luồng đặt vé mẫu.
+- Vé điện tử có mã tham chiếu được lưu trong LocalStorage trên thiết bị.
+- Dashboard minh họa doanh thu, tỷ lệ lấp đầy và mật độ suất chiếu.
+- Khu vực khuyến mãi, dịch vụ giải trí, sitemap và thông tin cuối trang.
+- Bản đồ OpenStreetMap nhúng; tọa độ hiển thị ở Huế là tham khảo, cần xác nhận vị trí rạp trước khi dùng thực tế.
+- Mô phỏng real-time seat lock bằng cập nhật giả lập, cho thấy trạng thái ghế đang được người khác giữ.
+- Hỗ trợ PWA/offline: app có manifest và service worker để lưu cache và hiển thị thông tin vé khi mất kết nối.
+- Animation transition với Framer Motion cho hero, modal và toast.
+- Giao diện responsive, hỗ trợ tìm kiếm bàn phím và tùy chọn giảm chuyển motion.
 
-## Giải thích thiết kế Lab 5 (Props vs Children)
-- **Component `Nut`**:
-  - *Props*: `loai` (`chinh` | `phu`), `kichThuoc` (`nho` | `trung-binh` | `lon`), `onClick`. Cho phép định hình kiểu dáng, kích thước và sự kiện xử lý của nút.
-  - *Children*: Nhãn nút / biểu tượng bên trong. Việc dùng `children` cho phép nhãn nút nhận cả chuỗi văn bản, thẻ HTML hoặc biểu tượng JSX mà không bị gò bó.
-- **Component `HuyHieu`**:
-  - *Props*: `mau` (`xanh` | `do` | `cam`). Dùng để thay đổi màu sắc hiển thị phù hợp với loại nhãn.
-  - *Children*: Nội dung badge (vd: "Phiên bản Bài 9", "Nổi bật").
-
-## Ảnh chụp giao diện
-![giao dien](./anh-chup/trang-danh-muc.png)
+## Giới hạn bản demo
+Đây là prototype frontend: trạng thái ghế, số liệu thống kê và seat lock là dữ liệu giả lập, không kết nối backend, WebSocket thực tế hay cổng thanh toán. Bảng giá, chương trình khuyến mãi, giờ mở cửa và dịch vụ chỉ là nội dung minh họa. Mã vé/QR chỉ minh họa, không dùng làm vé vào rạp thực tế.

@@ -1,8 +1,8 @@
 import "./App.css";
-import { TourListPage } from "./pages/TourListPage";
+import CinemaApp from "./features/cinema/CinemaApp";
 
 function App() {
-  return <TourListPage />;
+  return <CinemaApp />;
 }
 
 export default App;

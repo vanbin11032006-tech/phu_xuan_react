@@ -1,82 +1,23 @@
-.trang { max-width: 960px; margin: 0 auto; padding: 24px; }
-.luoi-dia-danh {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-}
-.danh-sach {
-  padding-left: 20px;
-  margin: 8px 0;
-}
-.danh-sach li {
-  margin-bottom: 6px;
-}
-
-.tour-list-page {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 32px 24px;
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f6f7fb;
+  background: #090b12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --surface: #11141e;
+  --surface-soft: #171b27;
+  --line: rgba(255, 255, 255, .08);
+  --muted: #9298a9;
+  --lime: #d9f36a;
+  --purple: #a994ff;
 }
 
-.price-filter {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  padding: 20px;
-  border: 1px solid #d7dee8;
-  border-radius: 8px;
-  background: #f7f9fc;
-}
-
-.price-filter label {
-  display: grid;
-  gap: 10px;
-  font-weight: 600;
-}
-
-.price-filter input {
-  width: 100%;
-}
-
-.filter-summary {
-  color: #475569;
-}
-
-.tour-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-.tour-card {
-  position: relative;
-  padding: 20px;
-  border: 1px solid #d7dee8;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 14px rgb(15 23 42 / 8%);
-}
-
-.tour-card__badge {
-  color: #b45309;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.tour-card__category {
-  color: #0f766e;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-
-.empty-state {
-  padding: 24px;
-  border: 1px dashed #94a3b8;
-  color: #475569;
-}
-
-@media (max-width: 640px) {
-  .price-filter {
-    grid-template-columns: 1fr;
-  }
-}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 340px; min-height: 100vh; }
+button { font: inherit; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+::selection { color: #090b12; background: var(--lime); }

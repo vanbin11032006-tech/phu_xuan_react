@@ -1,0 +1,17 @@
+{
+  "name": "Phú Xuân Cinema",
+  "short_name": "PX Cinema",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090b12",
+  "theme_color": "#090b12",
+  "description": "Demo đặt vé phim nâng cao, hỗ trợ xem offline và lưu vé điện tử.",
+  "icons": [
+    {
+      "src": "/icons.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
